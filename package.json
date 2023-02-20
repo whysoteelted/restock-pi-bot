@@ -1,0 +1,29 @@
+{
+  "name": "restock-pi-bot",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Telegram bot to get notified when RPis restock.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whysoteelted/restock-pi-bot.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/whysoteelted/restock-pi-bot/issues"
+  },
+  "homepage": "https://github.com/whysoteelted/restock-pi-bot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.0",
+    "rss-parser": "^3.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0"
+  }
+}
