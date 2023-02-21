@@ -3,11 +3,11 @@ import dotenv from "dotenv";
 import fetch from "node-fetch";
 
 dotenv.config();
-
-export const RSS_FEED = process.env.RSS_FEED || 'https://rpilocator.com/feed/?country=IT';
-export const REQUEST_INTERVAL = 20000;
-
 const parser = new Parser();
+
+const RSS_FEED = process.env.RSS_FEED || 'https://rpilocator.com/feed/?country=IT';
+const REQUEST_INTERVAL = process.env.REQUEST_INTERVAL || 300000;
+
 const BOT_TOKEN = process.env.BOT_API_TOKEN || ''
 const CHANNEL_ID = process.env.CHANNEL_ID || ''
 
@@ -17,7 +17,7 @@ const sendTelegramMessage = (msg) => {
     .then((data) => console.log(data));
 }
 
-const getFeed = async () => {
+const getFeedAndSend = async () => {
   const feed = await parser.parseURL(RSS_FEED);
   feed.items.forEach(item => {
     sendTelegramMessage(item.title + ': ' + item.link)
@@ -25,5 +25,5 @@ const getFeed = async () => {
 }
 
 setInterval(() => {
-  getFeed();
+  getFeedAndSend();
 }, REQUEST_INTERVAL);
