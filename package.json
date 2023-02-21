@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/whysoteelted/restock-pi-bot.git"
   },
-  "author": "",
+  "author": "Alessandro Caridi",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/whysoteelted/restock-pi-bot/issues"
