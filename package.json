@@ -1,7 +1,7 @@
 {
   "name": "restock-pi-bot",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Telegram bot to get notified when RPis restock.",
   "main": "index.js",
   "scripts": {
